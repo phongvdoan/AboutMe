@@ -1,0 +1,20 @@
+
+header {
+  margin: 0;
+  background: rgb(92, 92, 92);
+  color: white;
+}
+
+body {
+  background: Black;
+}
+
+main {
+  background: darkgray;
+  color: black;
+}
+
+
+#pic {
+  float: right;
+}
