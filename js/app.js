@@ -1,33 +1,33 @@
 'use strict';
 
-var kids = prompt('Do you have kids?');
-if (kids.toLowerCase() === 'yes' || kids.toLowerCase() === 'no') {
+var kids = prompt('Do you have kids?').toLowerCase();
+if (kids === 'yes') {
   // console.log('Have kids: ', kids);
-  alert('Have kids: ' + kids);
+  alert('You are correct! Phong does have kids!');
 } else {
   alert('Your input was incorrect!');
 }
 
-var instrument = prompt('Do you play a musical instrument?');
-if (instrument.toUpperCase() === 'YES' || instrument.toUpperCase() === 'NO') {
+var instrument = prompt('Do you play a musical instrument?').toUpperCase();
+if (instrument === 'YES') {
   // console.log('Plays an instrument: ', instrument);
-  alert('Plays an instrument: ' + instrument);
+  alert('You are correct! Phong plays the Piano.');
 } else {
   alert('Your input was incorrect!');
 }
 
-var maritalStatus = prompt('Are you married?');
-if (maritalStatus.toLowerCase() === 'yes' || maritalStatus.toLowerCase() === 'no') {
+var maritalStatus = prompt('Are you married?').toLowerCase();
+if (maritalStatus === 'yes') {
   // console.log('Is married: ', maritalStatus);
-  alert('Is married: ' + maritalStatus);
+  alert('Correct! Phong is married!');
 } else {
   alert('Your input was incorrect!');
 }
 
-var drinkBeer = prompt('Do you like beer?');
-if (drinkBeer.toUpperCase() === 'YES' || drinkBeer.toUpperCase() === 'NO') {
+var drinkBeer = prompt('Do you like beer?').toUpperCase();
+if ( drinkBeer === 'NO') {
   // console.log('Likes beer: ', drinkBeer);
-  alert('Likes beer: ' + drinkBeer);
+  alert('It is true, Phong does not like beer!');
 } else {
   alert('Your input was incorrect!');
 }
