@@ -9,5 +9,5 @@ This project is site strictly about myself, Phong. This is for Code Fellows 201 
 ## Lab 4
 -Project collaborators: Phong Doan & Micah Thorstenson
 
-# Driver Contributions
+#### Driver Contributions
 Micah altered the javascript file by refactoring Phong's personal questions into a single reusable function.
