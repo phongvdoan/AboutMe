@@ -1,4 +1,3 @@
-
 header {
   margin: 0;
   background: rgb(92, 92, 92);
@@ -14,7 +13,6 @@ main {
   color: black;
 }
 
-
-#pic {
+figure {
   float: right;
 }
