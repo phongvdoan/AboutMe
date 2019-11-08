@@ -67,14 +67,13 @@ function gameGuess() {
     guess = parseInt(prompt('What is Phong\'s favorite Number?'));
 
     if (guess > favNum) {
-      alert('The number you have guessed is TOO HIGH.');
+      alert('The number you have guessed is TOO HIGH. You have ' + (4 - counter) + ' tries left.');
       counter++;
     } else if (guess < favNum) {
-      alert('The number you have guessed is TOO LOW.');
+      alert('The number you have guessed is TOO LOW. You have ' + (4 - counter) + ' tries left.');
       counter++;
-      // eslint-disable-next-line use-isnan
-    } else if (guess === NaN || guess === null) {
-      alert('That is not a number. Input a number.');
+    } else if (isNaN(guess)) {
+      alert('That is not a number. Input a number. You have ' + (4 - counter) + ' tries left.');
       counter++;
     } else if (guess === 2) {
       alert('CONGRATS! You have guess Phong\'s favorite number with in ' + counter + ' tries!');
