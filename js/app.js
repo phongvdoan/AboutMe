@@ -1,37 +1,13 @@
 'use strict';
+
 var correct = 0;
-
-
 var firstName;
+
 while (firstName === undefined || firstName === null || firstName.length <= 0) {
   firstName = prompt('What is your name?');
 }
 // console.log('Welcome ' + firstName + '! Have a great day!');
 alert('Welcome ' + firstName + '! Let\'s see if you can guess things about me');
-
-var kids = prompt('Do you have kids?').toLowerCase();
-// console.log('Have kids: ', kids);
-yesAnswerPersonalQues(kids);
-
-var instrument = prompt('Do you play a musical instrument?').toUpperCase();
-// console.log('Plays an instrument: ', instrument);
-yesAnswerPersonalQues(instrument);
-
-var maritalStatus = prompt('Are you married?').toLowerCase();
-// console.log('Is married: ', maritalStatus);
-yesAnswerPersonalQues(maritalStatus);
-
-var drinkBeer = prompt('Do you like beer?').toUpperCase();
-// console.log('Likes beer: ', drinkBeer);
-noAnswerPersonalQues(drinkBeer);
-
-// start number guessing game
-gameGuess();
-
-// start food guessing game
-foodGame();
-
-
 
 ///
 /// FUNCTION SECTION
@@ -104,10 +80,31 @@ function foodGame() {
     }
     alert('No, ' + foodGuess + ' is not Phong\'s favorite food.');
   }
-  if (flag === false){
+  if (flag === false) {
     alert('You did not guess correctly within 6 tries!');
   }
   alert('My favorite foods include: ' + food);
 }
 alert('You scored ' + correct + 'out of 7!');
 
+var kids = prompt('Do you have kids?').toLowerCase();
+// console.log('Have kids: ', kids);
+yesAnswerPersonalQues(kids);
+
+var instrument = prompt('Do you play a musical instrument?').toUpperCase();
+// console.log('Plays an instrument: ', instrument);
+yesAnswerPersonalQues(instrument);
+
+var maritalStatus = prompt('Are you married?').toLowerCase();
+// console.log('Is married: ', maritalStatus);
+yesAnswerPersonalQues(maritalStatus);
+
+var drinkBeer = prompt('Do you like beer?').toUpperCase();
+// console.log('Likes beer: ', drinkBeer);
+noAnswerPersonalQues(drinkBeer);
+
+// start number guessing game
+gameGuess();
+
+// start food guessing game
+foodGame();
