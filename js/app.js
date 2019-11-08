@@ -15,7 +15,7 @@ alert('Welcome ' + firstName + '! Let\'s see if you can guess things about me');
 
 // Function accepts a string and evaluates if it is equal to a 'YES' answer
 function yesAnswerPersonalQues(guess) {
-  if (guess === 'YES') {
+  if (guess === 'YES' || guess === 'yes') {
     alert('You are correct!');
     correct++;
   } else {
@@ -25,7 +25,7 @@ function yesAnswerPersonalQues(guess) {
 
 // Function accepts a string and evaluates if it is equal to a 'NO' answer
 function noAnswerPersonalQues(guess) {
-  if (guess === 'NO') {
+  if (guess === 'NO' || guess === 'no') {
     alert('You are correct!');
     correct++;
   } else {
@@ -66,9 +66,9 @@ function foodGame() {
   var food = ['salad', 'porkchops', 'chocolate', 'buffalo wings', 'tacos', 'sushi'];
   var foodGuess;
   var count = 0;
-  var flag;
+  var flag = false;
 
-  while (count < 6 && flag !== true) {
+  while (count < 6 && !flag) {
     foodGuess = prompt('What is Phong\'s favorite food? You have ' + (6 - count) + ' tries left.').toLowerCase();
     count++;
     for (var i = 0; i < food.length; i++) {
@@ -78,14 +78,16 @@ function foodGame() {
         flag = true;
       }
     }
-    alert('No, ' + foodGuess + ' is not Phong\'s favorite food.');
+    if (count !== 6 && !flag) {
+      alert('No, ' + foodGuess + ' is not Phong\'s favorite food.');
+    }
   }
-  if (flag === false) {
+  if (count === 6 && !flag) {
     alert('You did not guess correctly within 6 tries!');
   }
   alert('My favorite foods include: ' + food);
 }
-alert('You scored ' + correct + 'out of 7!');
+
 
 var kids = prompt('Do you have kids?').toLowerCase();
 // console.log('Have kids: ', kids);
@@ -108,3 +110,6 @@ gameGuess();
 
 // start food guessing game
 foodGame();
+
+// Users score out of 7
+alert('You scored ' + correct + 'out of 7!');
